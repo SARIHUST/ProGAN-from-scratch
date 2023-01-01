@@ -1,7 +1,9 @@
 ### Pixel Normalization
+
 $$
 b_{x,y}=\frac{a_{x,y}}{\sqrt{\frac{1}{N}\sum_{j=0}^{N-1}(a_{x, y}^j)^2+\epsilon}}
 $$
+
 where $N$ is the number of channels, and $a_{x, y}$ represents the original feature vector in pixel $(x, y)$. $a_{x, y}^j$ represents the $j\text{th}$ channel value of the feature vector. 
 
 ### Final Architecture
