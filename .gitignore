@@ -1,2 +1,5 @@
 /celeba_hq
+/__pycache__
+/saved_examples
 *.pdf
+/logs
