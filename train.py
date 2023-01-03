@@ -112,7 +112,7 @@ def main():
     opt_gen = optim.Adam(gen.parameters(), lr=config.LEARNING_RATE, betas=config.BETAS)
     opt_critic = optim.Adam(critic.parameters(), lr=config.LEARNING_RATE, betas=config.BETAS)
 
-    writer = SummaryWriter('logs')
+    writer = SummaryWriter(config.LOGS)
 
     if config.LOAD_MODEL:
         load_checkpoint(config.CHECKPOINT_GEN, gen, opt_gen, config.LEARNING_RATE)

@@ -89,5 +89,5 @@ def generate_examples(gen, steps, img_size, n=100):
         with torch.no_grad():
             noise = torch.randn(1, config.Z_DIM, 1, 1).to(config.DEVICE)
             img = gen(noise, alpha, steps)
-            save_image(img*0.5+0.5, 'saved_examples/img_size_{}_{}.png'.format(img_size, i + 1))
+            save_image(img*0.5+0.5, '{}/img_size_{}_{}.png'.format(config.SAVE_EXAMPLES, img_size, i + 1))
     gen.train()
